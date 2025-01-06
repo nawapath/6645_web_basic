@@ -1,0 +1,53 @@
+header{
+    
+    height: 100px;
+}
+
+.container{
+    background-color: blueviolet;
+}
+footer{
+    background-color: aquamarine;
+    height: 100px;
+}
+nav{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-name{
+    
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.menu ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    gap:10px ;
+    padding: 0 0 0 24px;
+}
+.btn{
+    background-color: rgb(220, 232, 181);
+}
+.btn-primary{
+    background-color: blue;
+    color: aliceblue;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.btn-secondary{
+    background-color: rgb(226, 226, 229);
+    color: rgb(44, 20, 133);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
