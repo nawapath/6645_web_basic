@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Register</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #6d8d58;
+            
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .container{
+            margin: 0 auto;
+            max-width: 600px;
+            background-color: rgb(255, 246, 227);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px grey;
+        }
+        h1{
+            text-align: center;
+            color: rgb(28, 43, 28);
+        }
+        input,select,textarea{
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid red;
+        }
+        button{
+            width: 100%;
+            background-color: rgb(92, 92, 187);
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(76, 136, 82);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Persernal Information</h1>
+        <form action="">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder=" Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label for="HBD">Date of Birth</label>
+            <input type="date" id="HBD" name="HBD">
+
+            <label for="gender" >Gender</label>
+            <select name="gender" id="gender" >
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="hobbies">Hobbies</label>
+            <textarea name="hobbies" id="hobbies" cols="50" rows="5" placeholder=" List your hobbies"></textarea>
+            
+            <label for="country">Country</label>
+            <select name="country" id="country" >
+                <option value="">Select Country</option>
+                <option value="Thai">Thai</option>
+                <option value="Japan">Japan</option>
+                <option value="Chaina">Chaina</option>
+                <option value="Other">Other</option>
+            </select>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <a href="index.html">Back to Home</a> 
+</body>
+</html>
