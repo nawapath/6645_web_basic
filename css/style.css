@@ -1,20 +1,53 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(144, 144, 240);
+}
 header{
-    
-    height: 100px;
+    margin: 0 40px;
+
 }
 
+
 .container{
-    background-color: blueviolet;
+    width: 70%;
+    margin: auto;
+
 }
+.card{
+    background-color: rgb(255, 253, 253);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+.card img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+
 footer{
-    background-color: aquamarine;
+    background-color: rgb(189, 157, 240);
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 0;
+    margin-top: 15px;
+
+    p{
+        color: aliceblue;
+    }
 }
 nav{
     
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .logo-menu{
     display: flex;
@@ -35,7 +68,7 @@ nav{
     padding: 0 0 0 24px;
 }
 .btn{
-    background-color: rgb(220, 232, 181);
+   
 }
 .btn-primary{
     background-color: blue;
@@ -43,11 +76,32 @@ nav{
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+    border: none;
 }
+.btn-primary:hover{
+    background-color: rgb(33, 33, 98);
+}
+
 .btn-secondary{
     background-color: rgb(226, 226, 229);
     color: rgb(44, 20, 133);
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+    border: none;
+}
+.btn-secondary:hover{
+    background-color: rgb(148, 148, 148);
+    
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1rem;
+}
+.menu ul li a:hover{
+    text-decoration: none;
+    color: rgb(44, 20, 133);
+    font-size: 1rem;
 }
