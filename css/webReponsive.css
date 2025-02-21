@@ -1,0 +1,197 @@
+:root{
+    --primary-color :rgb(26, 26, 133);
+    --secondary-color :rgb(230, 138, 0);
+    --backface-color:rgb(201, 224, 224) ;
+    --text-color-normal: black;
+    --box-shadow: blue 0px 2px 10px;
+    --base-white-color: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:var(--text-color-normal);
+}
+header{
+    background-color: var(--backface-color);
+    box-shadow: var(--box-shadow);
+    padding: 10px 0;
+   
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+.logo-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+        display: flex;
+        align-items: center;
+
+    }
+
+}
+.header-button{
+    
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+    list-style: none;
+
+    margin-left: 20px;
+
+    a{
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+    a:hover{
+        color:var(--secondary-color);
+    }
+
+
+}
+
+
+/* Button Style */
+.btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--base-white-color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn-login{
+    padding: 10px 20px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    color: rgb(230, 138, 0);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover{
+    background-color: var(--secondary-color);
+}
+.btn-login:hover{
+    background-color: var(--secondary-color);
+    color: var(--base-white-color);
+}
+/* Main section */
+.container{
+    max-width: 1200px;
+    margin: 30px auto; /*บน ล่าง ซ้าย ขวา*/
+    padding: 0 20px;
+}
+/* Hero section*/
+.hero{
+    display: flex; /*ทำให้รูปขึ้นมาอยู่ข้างขวา*/
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.left-side{
+    width: 50%;
+    h1{
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: var(--secondary-color);
+    }
+    p{
+        font-family: 1.5rem;
+        margin: 20px 0;
+
+    }
+}
+.right-side{
+    width: 50%;
+    img{
+        width: 100%;
+    }
+}
+
+/*solutions Section*/
+.solutions{
+    margin-top: 50px;
+}
+.solutions-header{
+    text-align: center;
+    margin-bottom: 20px;
+
+    h2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+
+    p{
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+}
+.solutions-content{
+    display: flex;
+    justify-content: space-between;
+    .item{
+        width: 30%;
+    }
+}
+.item{
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    border-radius: 10px;
+    
+    h3{
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+}
+/*customize*/
+.customize{
+    display: flex; /*ทำให้รูปขึ้นมาอยู่ข้างขวา*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Dedicated*/
+.dedicated{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+
+/*discover*/
+.discover{
+    margin-top: 20px;
+}
+
+.discover-content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px
+    
+}
+
