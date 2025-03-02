@@ -6,21 +6,23 @@
     <title>Login</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"><style>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    
+    <style>
         body{
             margin: 0;
             padding: 0;
-            font-family: 'Kanit', Verdana, Tahoma, sans-serif;
-            background: linear-gradient(90deg, rgba(223,120,236,1) 46%, rgba(0,212,255,1) 100%);
+            font-family: Liter,'Sarabun', Geneva, Tahoma, sans-serif;
+            background: rgb(238,174,202);
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-
         }
         .container{
-            background-color: rgb(234, 240, 240);
+            background-color: aliceblue;
             width: 700px;
             border-radius: 15px;
             display: flex;
@@ -31,8 +33,8 @@
             background-size: cover;
             background-position: center;
             background-blend-mode: darken;
-            background-color: rgba(78, 78, 76, 0.625);
-            color: aliceblue;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
             padding: 40px;
             text-align: center;
             text-transform: uppercase;
@@ -43,61 +45,116 @@
             align-items: center;
             flex-direction: column;
 
+            
         }
         .right-side{
-            width: 40%;
             padding: 40px;
+            width: 40%;
+                form{
+                    label{
+                        display: block;
+                        font-size: 14px;
+                        margin-bottom: 4px;
+                    }
+                    input{
+                        width: 100%;
+                        padding: 4px;
+                        box-sizing: border-box;
+                        margin-bottom: 8px;
+                    }
+                    button{
+                        width: 100%;
+                        padding: 8px;
+                        background-color: rgb(39, 69, 223);
+                        border: none;
+                        color: white;
+                        font-size: 16px;
+                        cursor: pointer;
+                        margin-top: 8px;
+                    }
+                }
+        }
 
-            form{
-                label{
-                    display: block;
-                    font-size: 14px;
-                    margin-bottom: 4px;
-                }
-                input{
-                    width: 100%;
-                    padding: 4px;
-                    box-sizing: border-box;
-                    margin-bottom: 8px;
+        /* Resporsiv for Mobile */
+        @media screen and (max-width: 786px){
+            body{
+                margin: 20px 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container{
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                
+            }
+            .left-side{
+                width: 100%;
+                
 
-                }
-                button{
-                    width: 100%;
-                    padding: 8px;
-                    background-color: blue;
-                    border: none;
-                    color: aliceblue;
-                    font-size: 16px;
-                    cursor: pointer;
-                    margin-top: 8px;
-                    
-                }
+            }
+            .right-side{
+                width: 60%;
+                padding: 20px;
+                    h2{
+                        text-align: center;
+                    }
+                    p{
+                        text-align: center;
+                    }   
             }
         }
-    </style>
 
+
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="left-side">
-            <h1>Information Technology</h1>
-            <p>ยินดีต้อนรับเข้าสู่เว็บไซต์การเรียนการสอนการออกแบบและพัฒนาเว็บไซต์</p>
+            <h1>information technology</h1>
+            <p>ยินดีต้อนรับเข้าสู่เว็บไซด์การเรียนการสอนวิชาการออกแบบและพัฒนาเว็บเบื้องต้น </p>
         </div>
         <div class="right-side">
             <h2>Login</h2>
-            <form action="" method="">
-                <label for="">Username:</label><br>
-                <input type="text" name="username" id="username" readonly><br>
-                <label for="">Password:</label><br>
-                <input type="password" name="password" id="password" readonly><br>
+            <form action="" id="loginForm" method="post">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
                 <button type="submit">Login</button>
             </form>
-            <p>forgot<a href=""> password?</a></p>
-            <p>Don't have an account? <a href="#">Register</a></p>
+            <p>Forgot <a href="">Password?</a></p>
+            <p>Don't have an account?  <a href="#">Register</a></p>
         </div>
-       
     </div>
 
+    <script>
+        // เพิ่ม event listener ให้กับฟอร์มที่มี id เป็น "loginForm"
+        // เมื่อผู้ใช้กด submit จะเรียกใช้ฟังก์ชันที่กำหนด
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // ป้องกันการโหลดหน้าใหม่เมื่อกดปุ่ม submit
+   
+            // ดึงค่าที่ผู้ใช้ป้อนจาก input field (username และ password) และตัดช่องว่างด้านหน้า/หลังออก
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let errorMsg = document.getElementById("errorMsg"); // อ้างอิงถึง div ที่ใช้แสดงข้อความ error
+   
+            // ตรวจสอบว่าผู้ใช้กรอกข้อมูลครบหรือไม่
+            if (username === "" || password === "") {
+                errorMsg.textContent = "กรุณากรอก Username และ Password"; // แสดงข้อความแจ้งเตือน
+                return; // ออกจากฟังก์ชันทันที ไม่ดำเนินการตรวจสอบต่อ
+            }
+   
+            // ตรวจสอบว่าข้อมูลที่ป้อนตรงกับค่าที่กำหนดไว้หรือไม่ (username: "admin", password: "1234")
+            if (username === "admin" && password === "1111") {
+                //alert("เข้าสู่ระบบสำเร็จ!"); // แจ้งเตือนผู้ใช้ว่าล็อกอินสำเร็จ
+                window.location.href = "W13_01_WebResponsive.html"; // เปลี่ยนหน้าไปยังเป้าหมาย"
+            } else {
+                errorMsg.textContent = "Username หรือ Password ไม่ถูกต้อง"; // แสดงข้อความ error เมื่อป้อนข้อมูลผิด
+            }
+        });
+    </script>
 
 </body>
 </html>
