@@ -21,6 +21,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+           
+            
             
         }
         .pricing-card {
@@ -56,14 +58,26 @@
         .plan-features li .cross {
             color: red;
         }
+
+        .card{
+            width: 90%;
+        }
+        .img-size{
+            width: auto;
+            height: 50px;
+        }
+
+
         footer{
             p{
                 text-align: center;
                 justify-content: center;
                 padding: 10;
+                margin: 0;  
             }
            
         }
+
                 
     </style>
 
@@ -74,7 +88,7 @@
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
         <div class="container">
             <div class="d-flex align-item-center">
-                <img src="images/Logo-warga.png" alt="Logo" style="height: 30px;">
+                <img src="images/Logo-warga.png"  class="clickable-image" alt="Logo" style="height: 30px;">
                 <a class="navbar-brand ms-1" href="#">Warga</a>
             </div>
 
@@ -174,15 +188,15 @@
     </div>
 
 <!-- Pricing Section -->
-    <div class="container my-5">
+    <div class="container my-5 ">
         <h1 class="display-5 text-center">Pricing</h1>
         <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
             Voluptate molestiae expedita, maxime magnam impedit beatae doloribus maiores commodi nesciunt 
             facilis quaerat ratione placeat delectus, minus labore rerum? Quae, illum est.</p>
         
-        <div class="row">
+        <div class="row ">
             <div class="col-md-4">
-                <div class="pricing-card  card card-body mb-4 p-3" >
+                <div class="pricing-card  card card-body mb-4 p-3 m-auto" >
                     <h3 class="plan-title text-primary">Free Plan</h3>
                     <p class="plan-price">$0</p>
                     <p class="text-muted">per month</p>
@@ -197,7 +211,7 @@
             </div>
 
             <div class="col-md-4">
-                <div class="pricing-card  card card-body mb-4 p-3" >
+                <div class="pricing-card  card card-body mb-4 p-3 m-auto" >
                     <h3 class="plan-title text-primary">Free Plan</h3>
                     <p class="plan-price">$29</p>
                     <p class="text-muted">per month</p>
@@ -212,7 +226,7 @@
             </div>
 
             <div class="col-md-4">
-                <div class="pricing-card  card card-body mb-4 p-3" >
+                <div class="pricing-card  card card-body mb-4 p-3 m-auto" >
                     <h3 class="plan-title text-primary">Free Plan</h3>
                     <p class="plan-price">$49</p>
                     <p class="text-muted">per month</p>
@@ -229,14 +243,113 @@
 
 
         </div>
-
-
-
     </div>
+
+
+
+<!-- Table section -->
+    <div class="container-fluid bg-body-secondary mb-5">
+        
+        <div class="container  py-3">
+            <div class="card my-4 p-5 m-auto ">
+                <h1 class="text-uppercase text-center text-primary text-bg-warning">Member</h1>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Magnam molestias dolor laborum perferendis officia ipsum perspiciatis 
+                    molestiae doloribus tenetur placeat cupiditate quibusdam expedita officiis 
+                    tempore iusto, labore ipsa consectetur nobis.</p>
+
+                    <!-- Create table -->
+                    <table class="table table-hover table-responsive-md">
+                        <thead>
+                          <tr class="table-dark">
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                            <th scope="col">Photo</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td><img src="images/Hedgehog.jpg" class="img-thumbnail img-size clickable-image" alt="Hedgehog"></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td><img src="images/GuineaPig.jpg" class="img-thumbnail img-size clickable-image" alt="GuineaPig"></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                            <td><img src="images/SugarGlider.jpg" class="img-thumbnail img-size clickable-image" alt="SugarGlider"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                
+
+            </div>
+        </div>
+    </div>
+
+<!-- contact section -->
+    <div class="container-fluid">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="text-capitalize">contact us</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, debitis?</p>
+                    <p>Address: Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt enim dolorum non!</p>
+                    <p>Phone : +66 0813567144</p>
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Message</label>
+                          <textarea name="message" class="form-control" id="message" rows="4"></textarea>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
     
 <!-- Footter -->
     <footer>
-        <div class="footer  bg-dark  text-white p-5">
+        <div class="footer  bg-dark  text-white p-5 mt-5">
             <div class="container">
                 <p>@copyright by Nawapath </p>
                 <p>information Technology Program.  Science and Technology Faculty.</p>
@@ -258,5 +371,83 @@
     
 <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+    <script>
+        //โค้ดนี้ใช้ JavaScript เพื่อเลือกทุกองค์ประกอบ <img> ที่มี class="clickable-image" [จะเลือก ทั้ง 3 รูป] และเพิ่ม Event Listener ให้กับแต่ละรูปภาพ เพื่อให้สามารถคลิกแล้วเกิด popup (SweetAlert2) แสดงรูปขยายได้
+
+        document.querySelectorAll(".clickable-image").forEach(img => {   //img แทนแต่ละรูปที่ถูกเลือกในลูป
+            img.addEventListener("click", function() {    //เพิ่มฟังก์ชันให้ แต่ละรูป เมื่อถูกคลิก
+
+                Swal.fire({
+                    //title: 'Image Preview',
+                    imageUrl: img.src, // ใช้ src ของรูปที่คลิก
+                    imageWidth: 300, // ขนาดรูปที่ขยาย
+                    imageHeight: 'auto',
+                    imageAlt: img.alt, // ใช้ alt ของรูป
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    confirmButtonColor:'#d33',
+                    confirmButtonText: 'ปิด'
+
+                    
+                });
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+    
+            if (name && email && message) {
+                Swal.fire({
+                    title: 'Success!',
+                    //text: 'Your message has been sent.',
+                    /*
+                    text: 'Your message has been sent.\n\n' +
+                    'Name: ' + name + '\n' +
+                    'Email: ' + email + '\n' +
+                    'Message: ' + message,
+                    */
+                    html: `<p>Your message has been sent.</p>
+                    <p><b>Name:</b> ${name}</p>
+                    <p><b>Email:</b> ${email}</p>
+                    <p><b>Message:</b> ${message}</p>`,
+    
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+    
+    
+                    //showConfirmButton: false,
+                    timer: 1500
+    
+    
+                }).then(() => {
+                    // Optional: Reset form after submission
+                    document.getElementById('contactForm').reset();
+                });
+            } else {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Please fill out all fields.',
+                    icon: 'error',
+                    confirmButtonText: 'OK',
+                    timer: 1500
+                });
+            }
+        });
+    </script>
+    
+
 </body>
 </html>
